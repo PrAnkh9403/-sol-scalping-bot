@@ -1,0 +1,17 @@
+# render.yaml
+services:
+  - type: web
+    name: sol-scalping-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
+      - key: BYBIT_API_KEY
+        sync: false
+      - key: BYBIT_API_SECRET
+        sync: false
